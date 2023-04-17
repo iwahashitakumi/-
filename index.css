@@ -1,5 +1,6 @@
 a{
   transition: opacity .2s;
+  text-decoration: none;
 }
 a:hover{
   opacity: .8;
@@ -22,11 +23,13 @@ div,body,a,img,nav,span,p,h1{
     top: -80px;
 }
 
-.navi-link{
+
+
+.header-navi{
   color: black;
-  text-decoration: none;
+  
 }
-.navi-link2{
+.header-navi2{
   color: white;
   padding: 10px;
   background-color: orange;
@@ -41,20 +44,24 @@ div,body,a,img,nav,span,p,h1{
   text-align: center;
 }
 
-.navi-link>span:first-child{
+.header-navi>span:first-child{
   font-size: 16px;
 }
 
-.navi-link>span:last-child{
+.header-navi>span:last-child{
   font-size: 8px;
 }
 
-.navi-link>span{
+.header-navi>span{
   display: block;
 }
 
+@media screen and (max-width: 1080px){
+main {
+    padding-top: 60px;
+}}
 
-.top-of-main{
+.main-page{
   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
   background-size: cover;
   background-position: center;
@@ -85,7 +92,7 @@ div,body,a,img,nav,span,p,h1{
     text-align: center;
 }
 
-.maru{
+.main-img{
       margin-bottom: 25px;
 }
 
@@ -116,13 +123,18 @@ div,body,a,img,nav,span,p,h1{
   text-decoration: none;
 }
   
-.side{
+.About{
   background-color: orange;
   color: white;
   padding: 44px 0;
 }
+
+@media screen and (max-width: 1024px){
 .side-div{
-   max-width: 1140px;
+    flex-direction: column;
+}}
+.side-div{
+       max-width: 1140px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
@@ -131,18 +143,22 @@ div,body,a,img,nav,span,p,h1{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
 }
 
 .About__video {
-  max-width: 1042px;
-  margin-bottom: 16px;
-  width: 75%;
+  width: 50%;
 }
-  video {
-  object-fit: contain;
+
+video {
+  object-fit:contain;
 }
-.About__title{    align-items: center;
+
+@media screen and (max-width: 1024px){
+.About__video {
+    margin-bottom: 16px;
+    width: 75%;
+}}
+.About__title{     align-items: center;
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
@@ -151,8 +167,31 @@ div,body,a,img,nav,span,p,h1{
     margin-bottom: 0;
     margin-left: 32px;
    }
-
-.a3{
-  color: white;
-  text-decoration: none;
+   
+   .About__title h2 {
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: .1em;
+    line-height: 54px;
+    width: 100%;
 }
+
+.About__title p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1024px){
+.About__title {
+    margin-left: 0;
+    width: 75%;
+}}
+
+   .About__button{ color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;}
