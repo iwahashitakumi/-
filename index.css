@@ -25,6 +25,14 @@ a {
     width: 100%;
     position: absolute;
 }
+
+.Header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+
 @media screen and (max-width: 1080px){
 .Header {
     background-color: #fff;
@@ -34,11 +42,13 @@ a {
 .Header--common {
     position: fixed !important;
 }}
+
+@media screen and (max-width: 767px){
 .Header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-}
+    padding-top: 15px;
+    padding-bottom: 15px;
+}}
+
 .HeaderContainer {
     display: flex;
     justify-content: space-between;
@@ -46,6 +56,12 @@ a {
     max-width: 100%;
     position: relative;
 }
+
+@media screen and (max-width: 767px){
+.HeaderContainer {
+    max-width: 100%;
+    margin: 0 20px;
+}}
 
 @media screen and (min-width: 768px){
 .HeaderLogo {
@@ -58,6 +74,11 @@ a {
     width: auto;
 }
 
+@media screen and (max-width: 767px){
+.HeaderLogo__image--pc {
+    display: none;
+}}
+
 .lazyload {
     background-image: none !important;
 }
@@ -67,6 +88,11 @@ a {
     width: auto;
 }
 
+@media screen and (max-width: 767px){
+.HeaderLogo__image--sp {
+    display: block;
+}}
+
 .HeaderContainer>*:last-child {
     display: inline-flex;
 }
@@ -74,6 +100,11 @@ a {
 .HeaderNavHamburger {
     display: none;
 }
+
+@media screen and (max-width: 767px){
+.HeaderNavList {
+    top: 52px;
+}}
 
 @media screen and (max-width: 1080px){
 .HeaderNavHamburger {
@@ -252,7 +283,7 @@ a:hover{
   opacity: .8;
 }
 
-body,div,body,a,img,span,p,h1{
+aside,body,div,body,a,img,span,p,h1{
   margin: 0;
   padding: 0;
 }
@@ -260,55 +291,24 @@ body,div,body,a,img,span,p,h1{
   display: block;
   height: 20px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 36px;
-    max-width: 100%;
-    position: relative;
-    top: -80px;
-}
 
 
 
-.header-navi{
-  color: black;
-  
-}
-.header-navi2{
-  color: white;
-  padding: 10px;
-  background-color: orange;
-  border-radius: 32px;
-  border:1px solid #e0e0e0;
-  text-decoration: none;
-}
-.navi{
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  text-align: center;
-}
-
-.header-navi>span:first-child{
-  font-size: 16px;
-}
-
-.header-navi>span:last-child{
-  font-size: 8px;
-}
-
-.header-navi>span{
-  display: block;
-}
 
 main{
   display: block;
 }
 
+
+
 @media screen and (max-width: 1080px){
 main {
     padding-top: 60px;
+}}
+
+@media screen and (max-width: 767px){
+main {
+    padding-top: 52px;
 }}
 
 .main-page{
@@ -318,15 +318,29 @@ main {
   padding-top: 100px;
   padding-bottom: 28px;
 }
-.lazyload {
-    background-image: none !important;
-}
+
+@media screen and (max-width: 767px){
+.main-page {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 35px;
+}}
+
+
+
+
+
 .FirstView__main-image--sp {
     display: none;
 }
 .FirstView__main-image {
     width: 100%;
 }
+
+@media screen and (max-width: 767px){
+.FirstView__main-image--sp {
+    display: block;
+}}
 
 .main-div{
       max-width: 1140px;
@@ -336,17 +350,36 @@ main {
     margin-right: auto;
     position: relative;
 }
+
+@media screen and (max-width: 767px){
+.main-div {
+    margin-top: -45vw;
+}}
+
+@media screen and (max-width: 767px){
+.main-div {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}}
+
 .sub-div{
   margin-bottom: 70px;
   width: fit-content;
 }
+
+@media screen and (max-width: 767px){
+.sub-div {
+    margin-bottom: 20px;
+    width: 100%;
+}}
 
 img {
     border: 0;
     vertical-align: middle;
 }
 
-.h1{
+.main-title {
     color: #333;
     font-family: 'Lato',sans-serif;
     font-size: 38px;
@@ -356,9 +389,31 @@ img {
     text-align: center;
 }
 
+@media screen and (max-width: 767px){
+.main-title {
+    font-size: 25px;
+    line-height: 36px;
+    margin-left: calc(((100vw - 100%)/2)*-1);
+    margin-right: calc(((100vw - 100%)/2)*-1);
+}}
+
+
+@media screen and (max-width: 767px){
+.main-img {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+}}
+
 .main-img{
       margin-bottom: 25px;
 }
+
+@media screen and (max-width: 767px){
+.main-img img {
+    width: 27.5%;
+}}
 
 .main-img img {
     margin-right: 8px;
@@ -373,6 +428,11 @@ img {
 }
 
 
+@media screen and (max-width: 767px){
+.main-link {
+    flex-direction: column;
+}}
+
 .main-link a:visited {
     color: #fff;
 }
@@ -386,12 +446,23 @@ img {
     width: 306px;
 }
 
+@media screen and (max-width: 767px){
+.main-link a:first-of-type {
+    margin-right: 0;
+}}
+
 .main-link a:last-of-type {
     background-color: #fff;
     border: 1px solid #e0e0e0;
     color: #333;
     width: 176px;
 }
+
+@media screen and (max-width: 767px){
+.main-link a:last-of-type {
+    display: none;
+}}
+
 .main-link a {
     align-items: center;
     background-color: #f79214;
@@ -427,10 +498,14 @@ img {
   padding: 44px 0;
 }
 
-@media screen and (max-width: 1024px){
-.side-div{
-    flex-direction: column;
+@media screen and (max-width: 767px){
+.About {
+    padding: 30px 0;
 }}
+
+
+
+
 .side-div{
        max-width: 1140px;
     padding-left: 50px;
@@ -443,20 +518,42 @@ img {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 767px){
+.side-div {
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}}
+
+@media screen and (max-width: 1024px){
+.side-div {
+    flex-direction: column;
+}}
+
+
+
+
 .About__video {
   width: 50%;
 }
 
-video {
-  object-fit:contain;
-}
+
+
+
 
 @media screen and (max-width: 1024px){
 .About__video {
     margin-bottom: 16px;
     width: 75%;
 }}
-.About__title{     align-items: center;
+
+@media screen and (max-width: 767px){
+.About__video {
+    width: 100%;
+}}
+
+.About__title{     
+    align-items: center;
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
@@ -467,6 +564,14 @@ video {
    }
    
    .About__title h2 {
+    font-family: 'Lato',sans-serif;
+    font-size: 51px;
+    font-weight: 700;
+    line-height: 74px;
+    margin-bottom: 10px;
+}
+   
+   .About__title h2 {
     font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
     font-size: 38px;
     font-weight: 900;
@@ -474,6 +579,52 @@ video {
     line-height: 54px;
     width: 100%;
 }
+
+@media screen and (max-width: 767px){
+.About__title h2 {
+    font-size: 33px;
+    line-height: 1.2;
+    text-align: center;
+}}
+
+.About__title h2, .About__title p {
+    color: #fff;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 400px){
+.About__title h2 {
+    font-size: 33px;
+    line-height: 1.4;
+    word-break: keep-all;
+}}
+
+
+.About__title h2>span {
+    font-family: 'Lato',sans-serif;
+    font-size: 38px;
+}
+
+@media screen and (max-width: 767px){
+.About__title h2 span {
+    letter-spacing: 1px;
+}}
+
+.About__title h2 span {
+    font-weight: 900;
+}
+
+
+
+.About__title br {
+    display: none;
+}
+
+@media screen and (max-width: 400px){
+.About__title br {
+    display: block;
+}}
 
 .About__title p {
     font-size: 16px;
@@ -486,6 +637,12 @@ video {
 .About__title {
     margin-left: 0;
     width: 75%;
+}}
+
+@media screen and (max-width: 767px){
+.About__title {
+    margin-bottom: 0;
+    width: 100%;
 }}
 
    .About__button{ color: #fff;
