@@ -1,3 +1,9 @@
+*, *:before, *:after {
+    word-break: break-all;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 html{
   scroll-behavior: smooth;
@@ -165,10 +171,7 @@ ul, ol {
     list-style: none;
 }
 
-@media screen and (max-width: 1080px){
-.HeaderNavListItem {
-    margin-right: 0;
-}}
+
 
 @media screen and (min-width: 768px){
 .HeaderNavListItem {
@@ -178,6 +181,11 @@ ul, ol {
 .HeaderNavListItem {
     margin-right: 45px;
 }
+
+@media screen and (max-width: 1080px){
+.HeaderNavListItem {
+    margin-right: 0;
+}}
 
 @media screen and (max-width: 1080px){
 .HeaderNavListItem__link {
@@ -205,6 +213,10 @@ ul, ol {
     text-align: center;
 }
 
+.HeaderNavListItem__link>span:last-child {
+    font-size: 10px;
+}
+
 @media screen and (max-width: 1080px){
 .HeaderNavListItem__link>span:last-child {
     font-size: 12px;
@@ -213,9 +225,6 @@ ul, ol {
     letter-spacing: 2px;
 }}
 
-.HeaderNavListItem__link>span:last-child {
-    font-size: 10px;
-}
 
 @media screen and (max-width: 1080px){
 .HeaderNavListItem:last-of-type {
@@ -230,13 +239,7 @@ ul, ol {
     color: #fff;
 }
 
-@media screen and (max-width: 1080px){
-.HeaderNavListItem__button {
-    font-size: 16px;
-    margin: 0 auto;
-    height: 60px;
-    width: 250px;
-}}
+
 
 @media screen and (min-width: 768px){
 .HeaderNavListItem__button {
@@ -264,7 +267,13 @@ ul, ol {
     padding: 0 20px;
 }
 
-
+@media screen and (max-width: 1080px){
+.HeaderNavListItem__button {
+    font-size: 16px;
+    margin: 0 auto;
+    height: 60px;
+    width: 250px;
+}}
 
 
 
@@ -276,10 +285,11 @@ a:hover{
   opacity: .8;
 }
 
-aside,body,div,body,a,img,span,p,h1{
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select{
   margin: 0;
   padding: 0;
 }
+
 .logo{
   display: block;
   height: 20px;
@@ -477,6 +487,10 @@ img {
 @media screen and (max-width: 767px){
 .main-link a {
     width: 100% !important;
+}}
+@media screen and (min-width: 768px){
+.FirstViewContent__buttons a:hover {
+    opacity: .8;
 }}
 
 .article{
